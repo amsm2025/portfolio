@@ -589,3 +589,26 @@ button:focus-visible{
   }
 }
 
+
+
+/* Contact email fallback */
+.contact-email-row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  margin-top:16px;
+  color:#93a6bd;
+  font-size:13px;
+}
+.contact-email-row span{color:#7388a1}
+.contact-email-row a{
+  color:#bcd8f7;
+  font-weight:600;
+  border-bottom:1px solid rgba(115,182,255,.35);
+  transition:color .18s ease,border-color .18s ease;
+}
+.contact-email-row a:hover{
+  color:#73b6ff;
+  border-color:#73b6ff;
+}
