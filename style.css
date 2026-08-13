@@ -749,3 +749,38 @@ button:focus-visible{
   }
 }
 
+/* =========================================================
+   Final production audit — mobile, touch & accessibility
+   ========================================================= */
+.btn,
+.nav nav a,
+.project-link{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+}
+.contact-email-row a{
+  overflow-wrap:anywhere;
+}
+@media(max-width:420px){
+  .nav{
+    gap:10px;
+  }
+  .nav nav{
+    min-width:0;
+    overflow-x:auto;
+    scrollbar-width:none;
+    white-space:nowrap;
+  }
+  .nav nav::-webkit-scrollbar{
+    display:none;
+  }
+  .nav nav a{
+    flex:0 0 auto;
+  }
+  .contact-actions .btn{
+    flex:1 1 100%;
+    justify-content:center;
+  }
+}
+
