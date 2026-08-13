@@ -393,3 +393,199 @@ section[id] {
   .about-copy .about-lead{font-size:18px}
 }
 
+/* =========================================================
+   Contact + Footer — hiring CTA
+   ========================================================= */
+.contact-section{
+  background:
+    radial-gradient(circle at 85% 18%,rgba(90,167,255,.12),transparent 28%),
+    linear-gradient(180deg,#0b1728,#0d1c30);
+}
+.contact-shell{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:42px;
+  align-items:center;
+}
+.contact-copy h2{
+  max-width:900px;
+  margin-bottom:22px;
+}
+.contact-copy h2 span{color:#73b6ff}
+.contact-lead{
+  max-width:850px!important;
+  margin:0;
+  color:#b3c1d2!important;
+  font-size:18px!important;
+  line-height:1.75;
+}
+.contact-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+.availability-line{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  margin-top:24px;
+  color:#93a6bd;
+  font-size:13px;
+}
+.availability-dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#54d58c;
+  box-shadow:0 0 0 4px rgba(84,213,140,.10);
+}
+.availability-divider{color:#45617f}
+.contact-card{
+  padding:26px;
+  border:1px solid #28405c;
+  border-radius:22px;
+  background:linear-gradient(150deg,#10203a,#0a1627);
+  box-shadow:0 24px 70px rgba(0,0,0,.22);
+}
+.contact-card-kicker{
+  margin:0 0 8px!important;
+  color:#6ab0ff!important;
+  font-size:11px!important;
+  font-weight:800;
+  letter-spacing:1.8px;
+}
+.contact-card-row{
+  display:grid;
+  grid-template-columns:105px 1fr;
+  gap:14px;
+  align-items:center;
+  padding:18px 0;
+  border-bottom:1px solid #20324b;
+}
+.contact-card-row:last-child{border-bottom:0}
+.contact-card-row strong{
+  color:#73b6ff;
+  font-size:13px;
+}
+.contact-card-row span{
+  color:#aab7ca;
+  font-size:13px;
+  line-height:1.5;
+}
+.site-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:30px;
+  padding:34px 7vw;
+  border-top:1px solid #20324b;
+  background:#07101c;
+}
+.footer-brand{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.footer-logo{width:max-content}
+.footer-brand p{
+  margin:0;
+  color:#7388a1;
+  font-size:12px;
+}
+.footer-meta{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:7px;
+  color:#687b94;
+  font-size:12px;
+}
+@media(max-width:850px){
+  .contact-shell{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .site-footer{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .footer-meta{align-items:flex-start}
+  .contact-card-row{grid-template-columns:1fr;gap:5px}
+}
+
+/* =========================================================
+   Final polish — accessibility, responsive nav & motion
+   ========================================================= */
+.skip-link{
+  position:fixed;
+  top:10px;
+  left:10px;
+  z-index:999;
+  transform:translateY(-150%);
+  padding:10px 14px;
+  border-radius:10px;
+  background:#fff;
+  color:#07111f;
+  font-size:13px;
+  font-weight:800;
+  transition:transform .18s ease;
+}
+.skip-link:focus{transform:translateY(0)}
+a:focus-visible,
+button:focus-visible{
+  outline:3px solid #73b6ff;
+  outline-offset:3px;
+  border-radius:8px;
+}
+.project-visual img{
+  max-width:100%;
+}
+@media(max-width:800px){
+  .nav{
+    padding:16px 5vw;
+  }
+  .nav nav{
+    display:flex;
+    gap:12px;
+  }
+  .nav nav a{
+    font-size:12px;
+  }
+  .hero{
+    padding-left:5vw;
+    padding-right:5vw;
+  }
+  .section{
+    padding-left:5vw;
+    padding-right:5vw;
+  }
+}
+@media(max-width:520px){
+  .brand{font-size:20px}
+  .nav nav{gap:9px}
+  .nav nav a{font-size:11px}
+  .hero h1{
+    font-size:clamp(48px,17vw,70px);
+    letter-spacing:-3px;
+  }
+  .section h2{
+    letter-spacing:-2px;
+  }
+  .contact-actions .btn{
+    flex:1 1 calc(50% - 8px);
+    text-align:center;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+    scroll-behavior:auto!important;
+  }
+}
+
