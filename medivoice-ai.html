@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MediVoice AI case study by Angel Martin Manalansan — voice-enabled patient record retrieval using FastAPI, FHIR-oriented resources, verification, audit logging and Docker." />
+  <title>MediVoice AI Case Study | Angel Martin Manalansan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260910-medivoice" />
+  <style>
+    .case-page { max-width: 1180px; margin: 0 auto; padding: 120px 28px 80px; }
+    .case-hero { display:grid; grid-template-columns:1.05fr .95fr; gap:28px; align-items:center; margin-bottom:54px; }
+    .case-hero h1 { font-size:clamp(2.8rem,6vw,5.5rem); line-height:.96; margin:.4rem 0 1rem; }
+    .case-lead { font-size:1.08rem; line-height:1.8; max-width:760px; }
+    .case-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+    .case-section { margin:54px 0; }
+    .case-section h2 { margin-bottom:20px; }
+    .case-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .case-card { border:1px solid rgba(150,170,200,.18); border-radius:18px; padding:22px; background:rgba(255,255,255,.035); }
+    .case-card h3 { margin-top:0; }
+    .flow { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+    .flow span { border:1px solid rgba(115,182,255,.25); background:rgba(115,182,255,.08); padding:10px 12px; border-radius:999px; font-size:.88rem; }
+    .disclosure { margin-top:20px; padding:18px 20px; border-left:4px solid #73b6ff; background:rgba(115,182,255,.08); border-radius:12px; }
+    @media(max-width:800px){ .case-hero,.case-grid{grid-template-columns:1fr}.case-page{padding-top:96px} }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html#home">AMM<span>.</span></a>
+    <nav aria-label="Case study navigation">
+      <a href="index.html#projects">Projects</a>
+      <a href="https://github.com/amsm2025/medivoice-ai" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="case-page">
+    <section class="case-hero">
+      <div>
+        <p class="section-kicker">CASE STUDY · HEALTHCARE AI</p>
+        <h1>MediVoice AI</h1>
+        <p class="case-lead">An intelligent patient record retrieval agent that lets authorized healthcare users request synthetic patient information through natural voice or text, with identity verification, FHIR-oriented resources, role-based access concepts and structured audit logging.</p>
+        <div class="case-actions">
+          <a class="btn primary" href="https://github.com/amsm2025/medivoice-ai" target="_blank" rel="noopener">View GitHub Repository ↗</a>
+          <a class="btn ghost" href="index.html#projects">Back to Projects</a>
+        </div>
+      </div>
+
+      <div class="aico-visual" role="img" aria-label="MediVoice AI architecture overview">
+        <div class="aico-visual-head"><span class="tag">VOICE AI / FHIR / FASTAPI</span><span class="aico-badge">0.2</span></div>
+        <h3>MediVoice AI</h3>
+        <p class="aico-subtitle">Secure conversational record retrieval</p>
+        <div class="aico-architecture">
+          <div class="aico-layer aico-ai"><strong>Voice & Conversation</strong><span>Speech Recognition • Intent Detection • Spoken Response</span></div>
+          <div class="aico-connector"></div>
+          <div class="aico-layer"><strong>Verification & Authorization</strong><span>Patient Matching • DOB Challenge • RBAC Scaffolding</span></div>
+          <div class="aico-modules"><span>Patient</span><span>Allergies</span><span>Medications</span><span>Diagnoses</span><span>Labs</span><span>Appointments</span><span>FHIR</span><span>Audit</span></div>
+          <div class="aico-layer aico-data"><strong>Clinical Data Boundary</strong><span>Synthetic Records • Deterministic Source of Truth</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <p class="section-kicker">THE CHALLENGE</p>
+      <h2>Reducing friction in routine patient-record retrieval.</h2>
+      <div class="case-grid">
+        <article class="case-card"><h3>Problem</h3><p>Healthcare staff often move across multiple screens and record sections to locate routine patient information such as allergies, medications, diagnoses, laboratory results and upcoming appointments.</p></article>
+        <article class="case-card"><h3>Design Goal</h3><p>Create a natural conversational interface without allowing the AI layer to become the clinical source of truth. Identity checks, authorization concepts and data retrieval remain explicit application responsibilities.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <p class="section-kicker">THE SOLUTION</p>
+      <h2>Voice-to-record workflow with verification and auditability.</h2>
+      <div class="flow" aria-label="MediVoice request flow">
+        <span>Voice / Text Request</span><span>→</span><span>Intent Detection</span><span>→</span><span>Patient Match</span><span>→</span><span>DOB Verification</span><span>→</span><span>Clinical Retrieval</span><span>→</span><span>Spoken Response</span><span>→</span><span>Audit Event</span>
+      </div>
+      <div class="case-grid" style="margin-top:20px">
+        <article class="case-card"><h3>Conversational Retrieval</h3><p>Users can request patient summaries, allergies, medications, diagnoses, latest laboratory results and appointment information using voice or text.</p></article>
+        <article class="case-card"><h3>Verification</h3><p>After resolving a patient, MediVoice requires a date-of-birth challenge before releasing the requested synthetic clinical information.</p></article>
+        <article class="case-card"><h3>FHIR-Oriented Modeling</h3><p>The prototype exposes Patient, AllergyIntolerance, MedicationRequest, Condition, Observation and Appointment-style resources to demonstrate healthcare interoperability concepts.</p></article>
+        <article class="case-card"><h3>Auditability</h3><p>Requests capture user, role, method, action, patient, resource and result metadata so access decisions remain observable during development and testing.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <p class="section-kicker">ENGINEERING</p>
+      <h2>Technology and implementation.</h2>
+      <div class="project-tech"><span>Python</span><span>FastAPI</span><span>Pydantic</span><span>REST API</span><span>FHIR</span><span>Web Speech API</span><span>RBAC</span><span>Audit Logging</span><span>Pytest</span><span>Docker</span><span>Render</span></div>
+      <div class="case-grid" style="margin-top:20px">
+        <article class="case-card"><h3>Backend</h3><p>FastAPI handles patient search, retrieval, conversational intent processing, verification, FHIR-style bundles and audit endpoints.</p></article>
+        <article class="case-card"><h3>Frontend</h3><p>A clinician-facing browser interface supports voice recognition, text queries, spoken responses, verified patient display and recent audit events.</p></article>
+        <article class="case-card"><h3>Testing</h3><p>Automated API tests cover the core retrieval and conversational flow, including successful responses and validation behavior.</p></article>
+        <article class="case-card"><h3>Deployment</h3><p>The repository includes Docker configuration and a Render Blueprint for a single public web service that serves both the UI and API.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <p class="section-kicker">CURRENT STATUS</p>
+      <h2>Phase 0.2 — Conversational Voice Intelligence MVP.</h2>
+      <p class="case-lead">The current version demonstrates the complete synthetic-data retrieval loop. Planned work includes persistent storage, production-grade authentication, stronger authorization, expiring verification sessions, deeper FHIR persistence and a pluggable LLM/tool-calling layer.</p>
+      <div class="disclosure"><strong>Portfolio / demonstration scope:</strong> MediVoice AI currently uses synthetic patient data only and is not intended for clinical use. Production deployment with real patient information would require formal privacy, security, compliance and clinical governance controls.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><a class="brand footer-logo" href="index.html#home">AMM<span>.</span></a><p>Full Stack Engineering · AI · Enterprise Systems</p></div>
+    <div class="footer-meta"><span>© 2026 Angel Martin Manalansan</span><span>MediVoice AI Case Study</span></div>
+  </footer>
+</body>
+</html>
