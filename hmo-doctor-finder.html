@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HMO Doctor Finder case study by Angel Martin Manalansan." />
+  <title>HMO Doctor Finder | Angel Martin Manalansan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .case-hero{max-width:1100px;margin:0 auto;padding:110px 24px 36px}.case-hero h1{font-size:clamp(2.5rem,7vw,5rem);margin:.4rem 0 1rem}.case-hero .lead{max-width:800px}.case-grid{max-width:1100px;margin:0 auto;padding:0 24px 70px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.case-card{padding:24px;border:1px solid rgba(255,255,255,.12);border-radius:20px;background:rgba(255,255,255,.04)}.case-card h2{margin-top:0;font-size:1.15rem}.case-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.case-actions a{display:inline-flex;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700}.case-actions .primary{background:#73b6ff;color:#08111f}.case-actions .secondary{border:1px solid rgba(255,255,255,.18);color:inherit}.case-strip{max-width:1100px;margin:0 auto 40px;padding:0 24px;display:flex;gap:10px;flex-wrap:wrap}.case-strip span{padding:8px 10px;border-radius:999px;background:rgba(115,182,255,.1);border:1px solid rgba(115,182,255,.18);font-size:.82rem}.back{display:inline-block;margin-top:18px;color:#73b6ff;text-decoration:none}@media(max-width:760px){.case-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="nav"><a class="brand" href="index.html">AMM<span>.</span></a><nav><a href="index.html#projects">Projects</a><a href="index.html#contact">Contact</a></nav></header>
+  <main>
+    <section class="case-hero">
+      <p class="section-kicker">HEALTHCARE / FULL STACK / FASTAPI</p>
+      <h1>HMO Doctor Finder</h1>
+      <p class="lead">A full-stack healthcare discovery demo that helps users find doctors by HMO provider, specialty, location, patient type, rating, experience and teleconsult availability, with a demo appointment-request workflow.</p>
+      <div class="case-actions">
+        <a class="primary" href="https://hmo-doctor-finder.onrender.com" target="_blank" rel="noopener">Launch Live Demo ↗</a>
+        <a class="secondary" href="https://github.com/amsm2025/doctorfinder" target="_blank" rel="noopener">GitHub Repository ↗</a>
+        <a class="secondary" href="https://hmo-doctor-finder-api.onrender.com/docs" target="_blank" rel="noopener">API Docs ↗</a>
+      </div>
+      <a class="back" href="index.html#projects">← Back to portfolio</a>
+    </section>
+    <div class="case-strip"><span>FastAPI</span><span>Python</span><span>JavaScript</span><span>REST API</span><span>Render</span><span>OpenAPI</span></div>
+    <section class="case-grid">
+      <article class="case-card"><h2>Problem</h2><p>Patients often need to confirm both doctor suitability and HMO acceptance before requesting an appointment. Provider discovery can become fragmented across insurer directories, clinic pages and manual inquiries.</p></article>
+      <article class="case-card"><h2>Solution</h2><p>The demo centralizes HMO, specialty, location, patient-type and consultation filters into one workflow, then presents matching doctors and supports a simulated appointment request.</p></article>
+      <article class="case-card"><h2>Engineering</h2><p>The backend is built with FastAPI and exposes provider metadata, doctor search, doctor detail and appointment endpoints. The frontend consumes the REST API directly and includes responsive filtering, doctor cards and booking interactions.</p></article>
+      <article class="case-card"><h2>Deployment</h2><p>The frontend is deployed as a Render static site and the API as a Render Python web service. Python 3.13 is pinned for compatibility with the project dependency set.</p></article>
+      <article class="case-card"><h2>Current Scope</h2><p>All doctor names, schedules, HMO relationships, ratings and clinic data are fictional demo data. Appointment requests are stored in memory and are intended only for portfolio demonstration.</p></article>
+      <article class="case-card"><h2>Production Roadmap</h2><p>Next steps include PostgreSQL persistence, real provider-directory integrations, HMO eligibility verification, authentication and RBAC, audit logs, maps, notifications and AI natural-language doctor search.</p></article>
+    </section>
+  </main>
+</body>
+</html>
