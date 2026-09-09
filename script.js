@@ -71,3 +71,25 @@ if (projectShowcase && !document.querySelector('[data-project="northbay-family-c
         numberElement.textContent = String(index + 1).padStart(2, '0');
     });
 }
+
+// Add the deployed Healthcare AI Voice Agent demo to its case study.
+const healthcareProject = Array.from(document.querySelectorAll('.project-case')).find(
+    (project) => project.querySelector('h3')?.textContent?.trim() === 'Healthcare AI Voice Agent'
+);
+
+if (healthcareProject) {
+    const projectActions = healthcareProject.querySelector('.project-actions');
+    const existingLiveDemo = projectActions?.querySelector('[data-healthcare-live-demo]');
+
+    if (projectActions && !existingLiveDemo) {
+        const liveDemo = document.createElement('a');
+        liveDemo.className = 'project-link';
+        liveDemo.href = 'https://healthcare-ai-voice-agent-ui.onrender.com/';
+        liveDemo.target = '_blank';
+        liveDemo.rel = 'noopener';
+        liveDemo.setAttribute('aria-label', 'Open Healthcare AI Voice Agent live demo in a new tab');
+        liveDemo.setAttribute('data-healthcare-live-demo', 'true');
+        liveDemo.textContent = 'Live Demo ↗';
+        projectActions.insertBefore(liveDemo, projectActions.firstChild);
+    }
+}
