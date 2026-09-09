@@ -80,7 +80,7 @@ if (projectShowcase && !document.querySelector('[data-project="medivoice-ai"]'))
           <div class="aico-visual" role="img" aria-label="MediVoice AI voice-enabled patient record retrieval architecture">
             <div class="aico-visual-head">
               <span class="tag">VOICE AI / HEALTHCARE / FHIR</span>
-              <span class="aico-badge">MVP</span>
+              <span class="aico-badge">LIVE</span>
             </div>
             <h3>MediVoice AI</h3>
             <p class="aico-subtitle">Intelligent Patient Record Retrieval Agent</p>
@@ -119,9 +119,10 @@ if (projectShowcase && !document.querySelector('[data-project="medivoice-ai"]'))
               </div>
             </div>
 
-            <div class="project-tech"><span>Python</span><span>FastAPI</span><span>Voice AI</span><span>FHIR</span><span>REST API</span><span>RBAC</span><span>Audit Logging</span><span>Docker</span><span>Render-ready</span></div>
+            <div class="project-tech"><span>Python</span><span>FastAPI</span><span>Voice AI</span><span>FHIR</span><span>REST API</span><span>RBAC</span><span>Audit Logging</span><span>Docker</span><span>Render</span></div>
             <div class="project-actions">
-              <a class="project-link" href="medivoice-ai.html" aria-label="Open MediVoice AI case study">View Case Study ↗</a>
+              <a class="project-link" href="https://medivoice-ai-9ke2.onrender.com/" target="_blank" rel="noopener" aria-label="Open MediVoice AI live demo in a new tab">Live Demo ↗</a>
+              <a class="project-link secondary-link" href="medivoice-ai.html" aria-label="Open MediVoice AI case study">View Case Study ↗</a>
               <a class="project-link secondary-link" href="https://github.com/amsm2025/medivoice-ai" target="_blank" rel="noopener" aria-label="Open MediVoice AI GitHub repository in a new tab">GitHub Repository ↗</a>
             </div>
           </div>
