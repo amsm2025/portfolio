@@ -160,3 +160,70 @@ if (healthcareProject) {
         projectActions.insertBefore(liveDemo, projectActions.firstChild);
     }
 }
+
+// Add MediDx AI as a featured clinical decision-support case study.
+if (projectShowcase && !document.querySelector('[data-project="medidx-ai"]')) {
+    const firstProject = projectShowcase.querySelector('.project-case');
+    const mediDxProject = `
+        <article class="project-case featured-case" data-project="medidx-ai">
+          <div class="aico-visual" role="img" aria-label="MediDx AI clinical decision-support architecture">
+            <div class="aico-visual-head">
+              <span class="tag">AI / HEALTHCARE / CLINICAL SUPPORT</span>
+              <span class="aico-badge">LIVE</span>
+            </div>
+            <h3>MediDx AI</h3>
+            <p class="aico-subtitle">AI-Assisted Health Assessment & Clinical Decision Support</p>
+            <div class="aico-architecture">
+              <div class="aico-layer aico-ai"><strong>Clinical Intake</strong><span>Symptoms • History • Vitals • Risk Factors</span></div>
+              <div class="aico-connector"></div>
+              <div class="aico-layer"><strong>Deterministic Safety Engine</strong><span>Red Flags • Urgency • Guardrails</span></div>
+              <div class="aico-modules">
+                <span>Patient</span><span>Encounter</span><span>Vitals</span><span>Red Flags</span>
+                <span>Differentials</span><span>Evidence</span><span>History</span><span>Audit</span>
+              </div>
+              <div class="aico-layer aico-data"><strong>Clinical Decision-Support Layer</strong><span>FastAPI • PostgreSQL-ready Persistence • Clinician Review</span></div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-topline"><span class="tag">FASTAPI / PYTHON / HEALTHCARE</span><span class="project-number">02</span></div>
+            <h3>MediDx AI</h3>
+            <p class="project-summary">A safety-conscious clinical decision-support demo that turns structured synthetic patient intake into deterministic red-flag screening, urgency classification, evidence-based differential considerations, missing-information prompts and clinician next-step guidance.</p>
+
+            <div class="case-study-grid">
+              <div class="case-study-item">
+                <strong>Problem</strong>
+                <span>Clinical intake contains many signals that must be organized quickly without allowing an AI prototype to overstate certainty or replace professional judgment.</span>
+              </div>
+              <div class="case-study-item">
+                <strong>Solution</strong>
+                <span>Built a structured assessment workflow that places deterministic emergency screening ahead of any future generative-AI layer and clearly separates suggestions from confirmed diagnosis.</span>
+              </div>
+              <div class="case-study-item">
+                <strong>Engineering</strong>
+                <span>Implemented FastAPI endpoints, synthetic patient encounters, red-flag rules, differential evidence cards, assessment history, audit summaries, Docker development and Render deployment.</span>
+              </div>
+              <div class="case-study-item">
+                <strong>Safety & Scope</strong>
+                <span>Portfolio demonstration using synthetic scenarios only. It does not diagnose disease, prescribe treatment or replace licensed clinical care.</span>
+              </div>
+            </div>
+
+            <div class="project-tech"><span>Python</span><span>FastAPI</span><span>SQLAlchemy</span><span>PostgreSQL</span><span>Clinical Decision Support</span><span>Docker</span><span>Render</span></div>
+            <div class="project-actions">
+              <a class="project-link" href="https://medidx-ai-q1sg.onrender.com/" target="_blank" rel="noopener" aria-label="Open MediDx AI live demo in a new tab">Live Demo ↗</a>
+              <a class="project-link secondary-link" href="medidx-ai.html" aria-label="Open MediDx AI case study">View Case Study ↗</a>
+              <a class="project-link secondary-link" href="https://github.com/amsm2025/medidx-ai" target="_blank" rel="noopener" aria-label="Open MediDx AI GitHub repository in a new tab">GitHub Repository ↗</a>
+            </div>
+          </div>
+        </article>`;
+
+    if (firstProject) {
+        firstProject.insertAdjacentHTML('afterend', mediDxProject);
+    } else {
+        projectShowcase.insertAdjacentHTML('afterbegin', mediDxProject);
+    }
+
+    projectShowcase.querySelectorAll('.project-number').forEach((numberElement, index) => {
+        numberElement.textContent = String(index + 1).padStart(2, '0');
+    });
+}
