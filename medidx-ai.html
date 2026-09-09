@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MediDx AI case study by Angel Martin Manalansan — a safety-conscious AI-assisted health assessment and clinical decision-support portfolio demo." />
+  <title>MediDx AI Case Study | Angel Martin Manalansan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260910-medidx" />
+  <style>
+    .case-hero{max-width:1120px;margin:0 auto;padding:72px 24px 28px}.case-hero h1{font-size:clamp(42px,8vw,78px);line-height:.95;margin:12px 0 20px}.case-lead{max-width:860px;font-size:20px;line-height:1.7;color:#9fb1c8}.case-badges,.case-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.case-badge{padding:8px 12px;border:1px solid rgba(115,182,255,.28);border-radius:999px;color:#b8d8ff;background:rgba(22,50,82,.55);font-size:12px;font-weight:700}.case-content{max-width:1120px;margin:0 auto;padding:10px 24px 80px}.case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.case-panel{background:linear-gradient(180deg,rgba(17,32,54,.92),rgba(9,20,36,.96));border:1px solid rgba(115,182,255,.14);border-radius:22px;padding:24px}.case-panel h2,.case-panel h3{margin-top:0}.case-panel p,.case-panel li{color:#aebed1;line-height:1.7}.arch{display:grid;gap:12px;margin-top:16px}.arch div{border:1px solid rgba(115,182,255,.18);border-radius:14px;padding:15px;background:rgba(10,28,48,.7)}.arch strong{display:block;color:#fff;margin-bottom:4px}.warning{border-left:4px solid #f7c948;background:rgba(247,201,72,.08)}@media(max-width:760px){.case-grid{grid-template-columns:1fr}.case-hero{padding-top:48px}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html">AMM<span>.</span></a>
+    <nav aria-label="Case study navigation"><a href="index.html#projects">Back to Projects</a><a href="https://github.com/amsm2025/medidx-ai" target="_blank" rel="noopener">GitHub</a></nav>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <p class="section-kicker">HEALTHCARE AI CASE STUDY</p>
+      <h1>MediDx AI</h1>
+      <p class="case-lead">AI-Assisted Health Assessment & Clinical Decision Support — a portfolio prototype designed around deterministic red-flag screening, structured synthetic patient intake, evidence-aware differential considerations, clinician-review workflows and explicit safety boundaries.</p>
+      <div class="case-badges"><span class="case-badge">Python</span><span class="case-badge">FastAPI</span><span class="case-badge">SQLAlchemy</span><span class="case-badge">PostgreSQL</span><span class="case-badge">Docker</span><span class="case-badge">Render</span></div>
+      <div class="case-actions">
+        <a class="btn primary" href="https://medidx-ai-q1sg.onrender.com/" target="_blank" rel="noopener">Open Live Demo ↗</a>
+        <a class="btn ghost" href="https://github.com/amsm2025/medidx-ai" target="_blank" rel="noopener">GitHub Repository ↗</a>
+      </div>
+    </section>
+
+    <section class="case-content">
+      <div class="case-grid">
+        <article class="case-panel">
+          <h2>Problem</h2>
+          <p>Clinical intake contains symptoms, history, vital signs and risk factors that must be organized quickly. A prototype in this space also needs strong boundaries so it does not present model output as a confirmed diagnosis or autonomous treatment decision.</p>
+        </article>
+        <article class="case-panel">
+          <h2>Solution</h2>
+          <p>MediDx AI structures synthetic patient information, runs deterministic red-flag checks first, classifies urgency, produces differential considerations with supporting and missing evidence, highlights information gaps and provides clinician-oriented next-step guidance.</p>
+        </article>
+        <article class="case-panel">
+          <h2>Architecture</h2>
+          <div class="arch">
+            <div><strong>Clinical Intake</strong><span>Symptoms, age, sex, duration, onset, history, allergies, medications, smoking status and vitals.</span></div>
+            <div><strong>Deterministic Safety Engine</strong><span>Red-flag rules and urgency classification run ahead of any future generative-AI layer.</span></div>
+            <div><strong>Decision-Support Layer</strong><span>Differential considerations, evidence for/against, missing information and clinician next steps.</span></div>
+            <div><strong>Persistence & Audit</strong><span>Patient/encounter IDs, assessment history and audit summaries using SQLAlchemy with PostgreSQL-ready persistence.</span></div>
+          </div>
+        </article>
+        <article class="case-panel">
+          <h2>Engineering Highlights</h2>
+          <ul>
+            <li>FastAPI REST API with structured Pydantic request and response models.</li>
+            <li>Rule-based emergency screening for symptoms and abnormal vital-sign thresholds.</li>
+            <li>Evidence-aware differential cards rather than a single definitive diagnosis.</li>
+            <li>Assessment history with encounter reopen workflow.</li>
+            <li>Docker Compose development environment and Render cloud deployment.</li>
+          </ul>
+        </article>
+        <article class="case-panel warning">
+          <h2>Safety Boundary</h2>
+          <p><strong>Demo — not for clinical use.</strong> MediDx AI uses synthetic scenarios and does not diagnose disease, prescribe treatment or replace a licensed clinician. The current release intentionally uses deterministic logic rather than an unconstrained LLM for emergency screening.</p>
+        </article>
+        <article class="case-panel">
+          <h2>Roadmap</h2>
+          <ul>
+            <li>Controlled AI summarization and follow-up-question generation after safety screening.</li>
+            <li>FHIR-compatible patient and observation structures.</li>
+            <li>RBAC and clinician authentication.</li>
+            <li>Lab and medication context.</li>
+            <li>MediVoice AI integration for voice-based clinical intake and retrieval.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
