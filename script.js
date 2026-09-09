@@ -12,218 +12,68 @@ if (projectShowcase && !document.querySelector('[data-project="northbay-family-c
     const northbayProject = `
         <article class="project-case featured-case" data-project="northbay-family-clinic">
           <div class="aico-visual" role="img" aria-label="Northbay Family Clinic agentic scheduling architecture overview">
-            <div class="aico-visual-head">
-              <span class="tag">AGENTIC AI / HEALTHCARE</span>
-              <span class="aico-badge">LIVE</span>
-            </div>
-            <h3>Northbay</h3>
-            <p class="aico-subtitle">Family Clinic · Agentic Patient Scheduling</p>
-            <div class="aico-architecture">
-              <div class="aico-layer aico-ai"><strong>Patient Conversation Layer</strong><span>Guided Scheduling • Claude-ready Agent Experience</span></div>
-              <div class="aico-connector"></div>
-              <div class="aico-layer"><strong>Node.js + Express API</strong><span>REST Endpoints • Session Flow • Scheduling Logic</span></div>
-              <div class="aico-modules">
-                <span>Doctors</span><span>Availability</span><span>Booking</span><span>Lookup</span>
-                <span>Cancel</span><span>Reschedule</span><span>Tool Use</span><span>Guided Fallback</span>
-              </div>
-              <div class="aico-layer aico-data"><strong>Scheduling Data & Deployment</strong><span>JSON Demo Store • GitHub • Render Free</span></div>
-            </div>
+            <div class="aico-visual-head"><span class="tag">AGENTIC AI / HEALTHCARE</span><span class="aico-badge">LIVE</span></div>
+            <h3>Northbay</h3><p class="aico-subtitle">Family Clinic · Agentic Patient Scheduling</p>
+            <div class="aico-architecture"><div class="aico-layer aico-ai"><strong>Patient Conversation Layer</strong><span>Guided Scheduling • Claude-ready Agent Experience</span></div><div class="aico-connector"></div><div class="aico-layer"><strong>Node.js + Express API</strong><span>REST Endpoints • Session Flow • Scheduling Logic</span></div><div class="aico-modules"><span>Doctors</span><span>Availability</span><span>Booking</span><span>Lookup</span><span>Cancel</span><span>Reschedule</span><span>Tool Use</span><span>Guided Fallback</span></div><div class="aico-layer aico-data"><strong>Scheduling Data & Deployment</strong><span>JSON Demo Store • GitHub • Render Free</span></div></div>
           </div>
-          <div class="project-content">
-            <div class="project-topline"><span class="tag">NODE.JS / EXPRESS / AI</span><span class="project-number">02</span></div>
-            <h3>Northbay Family Clinic</h3>
-            <p class="project-summary">A deployed agentic patient-scheduling application built with Node.js 20+, Express 5 and JavaScript, with Anthropic Claude tool-use integration provisioned for conversational scheduling and a guided fallback mode for zero-cost demonstrations.</p>
-
-            <div class="case-study-grid">
-              <div class="case-study-item">
-                <strong>Problem</strong>
-                <span>Clinic staff and patients often spend time on repetitive appointment tasks such as finding doctors, checking availability and managing bookings.</span>
-              </div>
-              <div class="case-study-item">
-                <strong>Solution</strong>
-                <span>Built a conversational scheduling workflow that supports doctor discovery, availability checks, booking, lookup, cancellation and rescheduling through a single patient-facing experience.</span>
-              </div>
-              <div class="case-study-item">
-                <strong>Agentic Design</strong>
-                <span>Provisioned Anthropic Claude tool use so the AI layer can invoke scheduling functions while keeping the scheduling engine as the source of truth instead of allowing the model to invent appointment data.</span>
-              </div>
-              <div class="case-study-item">
-                <strong>Deployment</strong>
-                <span>Published through GitHub to Render as a free public web service, with environment-based configuration and guided fallback when no Anthropic API key is enabled.</span>
-              </div>
-            </div>
-
-            <div class="project-tech"><span>Node.js 20+</span><span>Express 5</span><span>JavaScript</span><span>REST API</span><span>Anthropic Claude SDK</span><span>Tool Use</span><span>HTML/CSS</span><span>GitHub</span><span>Render</span></div>
-            <div class="project-actions">
-              <a class="project-link" href="https://northbay-family-clinic.onrender.com/" target="_blank" rel="noopener" aria-label="Open Northbay Family Clinic live demo in a new tab">Live Demo ↗</a>
-              <a class="project-link secondary-link" href="https://github.com/amsm2025/northbay-family-clinic" target="_blank" rel="noopener" aria-label="Open Northbay Family Clinic GitHub repository in a new tab">GitHub Repository ↗</a>
-            </div>
+          <div class="project-content"><div class="project-topline"><span class="tag">NODE.JS / EXPRESS / AI</span><span class="project-number">02</span></div><h3>Northbay Family Clinic</h3><p class="project-summary">A deployed agentic patient-scheduling application built with Node.js 20+, Express 5 and JavaScript, with Anthropic Claude tool-use integration provisioned for conversational scheduling and a guided fallback mode for zero-cost demonstrations.</p>
+            <div class="case-study-grid"><div class="case-study-item"><strong>Problem</strong><span>Clinic staff and patients often spend time on repetitive appointment tasks such as finding doctors, checking availability and managing bookings.</span></div><div class="case-study-item"><strong>Solution</strong><span>Built a conversational scheduling workflow that supports doctor discovery, availability checks, booking, lookup, cancellation and rescheduling through a single patient-facing experience.</span></div><div class="case-study-item"><strong>Agentic Design</strong><span>Provisioned Anthropic Claude tool use so the AI layer can invoke scheduling functions while keeping the scheduling engine as the source of truth instead of allowing the model to invent appointment data.</span></div><div class="case-study-item"><strong>Deployment</strong><span>Published through GitHub to Render as a free public web service, with environment-based configuration and guided fallback when no Anthropic API key is enabled.</span></div></div>
+            <div class="project-tech"><span>Node.js 20+</span><span>Express 5</span><span>JavaScript</span><span>REST API</span><span>Anthropic Claude SDK</span><span>Tool Use</span><span>HTML/CSS</span><span>GitHub</span><span>Render</span></div><div class="project-actions"><a class="project-link" href="https://northbay-family-clinic.onrender.com/" target="_blank" rel="noopener">Live Demo ↗</a><a class="project-link secondary-link" href="https://github.com/amsm2025/northbay-family-clinic" target="_blank" rel="noopener">GitHub Repository ↗</a></div>
           </div>
         </article>`;
-
-    if (firstProject) {
-        firstProject.insertAdjacentHTML('afterend', northbayProject);
-    } else {
-        projectShowcase.insertAdjacentHTML('afterbegin', northbayProject);
-    }
-
-    projectShowcase.querySelectorAll('.project-number').forEach((numberElement, index) => {
-        numberElement.textContent = String(index + 1).padStart(2, '0');
-    });
+    if (firstProject) firstProject.insertAdjacentHTML('afterend', northbayProject); else projectShowcase.insertAdjacentHTML('afterbegin', northbayProject);
+    projectShowcase.querySelectorAll('.project-number').forEach((el, i) => el.textContent = String(i + 1).padStart(2, '0'));
 }
 
-// Add MediVoice AI as a featured healthcare AI case study.
 if (projectShowcase && !document.querySelector('[data-project="medivoice-ai"]')) {
     const firstProject = projectShowcase.querySelector('.project-case');
     const mediVoiceProject = `
         <article class="project-case featured-case" data-project="medivoice-ai">
-          <div class="aico-visual" role="img" aria-label="MediVoice AI voice-enabled patient record retrieval architecture">
-            <div class="aico-visual-head">
-              <span class="tag">VOICE AI / HEALTHCARE / FHIR</span>
-              <span class="aico-badge">LIVE</span>
-            </div>
-            <h3>MediVoice AI</h3>
-            <p class="aico-subtitle">Intelligent Patient Record Retrieval Agent</p>
-            <div class="aico-architecture">
-              <div class="aico-layer aico-ai"><strong>Voice & Conversation Layer</strong><span>Speech Recognition • Intent Detection • Spoken Response</span></div>
-              <div class="aico-connector"></div>
-              <div class="aico-layer"><strong>Secure Retrieval Workflow</strong><span>Patient Matching • DOB Verification • RBAC Scaffolding</span></div>
-              <div class="aico-modules">
-                <span>Patient</span><span>Allergies</span><span>Medications</span><span>Diagnoses</span>
-                <span>Labs</span><span>Appointments</span><span>FHIR</span><span>Audit</span>
-              </div>
-              <div class="aico-layer aico-data"><strong>Clinical Data Boundary</strong><span>Synthetic Records • FHIR-style Resources • Deterministic Source of Truth</span></div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-topline"><span class="tag">FASTAPI / VOICE AI / FHIR</span><span class="project-number">02</span></div>
-            <h3>MediVoice AI</h3>
-            <p class="project-summary">A voice-enabled healthcare AI prototype that lets authorized users retrieve synthetic patient information through natural-language requests while keeping identity verification, authorization concepts, clinical data retrieval and audit logging separate from the conversational layer.</p>
-
-            <div class="case-study-grid">
-              <div class="case-study-item">
-                <strong>Problem</strong>
-                <span>Clinical staff can spend valuable time navigating fragmented screens and records to locate routine patient information during care workflows.</span>
-              </div>
-              <div class="case-study-item">
-                <strong>Solution</strong>
-                <span>Built a conversational patient-record retrieval flow supporting voice and text requests for summaries, allergies, medications, diagnoses, laboratory results and appointments.</span>
-              </div>
-              <div class="case-study-item">
-                <strong>Engineering</strong>
-                <span>Implemented FastAPI REST endpoints, browser speech recognition and synthesis, patient matching, DOB verification, FHIR-oriented resources, RBAC scaffolding, audit events, automated tests and Docker deployment.</span>
-              </div>
-              <div class="case-study-item">
-                <strong>Safety & Scope</strong>
-                <span>Uses synthetic patient data only and is not for clinical use. The conversational layer interprets requests while deterministic application services remain the source of clinical facts.</span>
-              </div>
-            </div>
-
-            <div class="project-tech"><span>Python</span><span>FastAPI</span><span>Voice AI</span><span>FHIR</span><span>REST API</span><span>RBAC</span><span>Audit Logging</span><span>Docker</span><span>Render</span></div>
-            <div class="project-actions">
-              <a class="project-link" href="https://medivoice-ai-9ke2.onrender.com/" target="_blank" rel="noopener" aria-label="Open MediVoice AI live demo in a new tab">Live Demo ↗</a>
-              <a class="project-link secondary-link" href="medivoice-ai.html" aria-label="Open MediVoice AI case study">View Case Study ↗</a>
-              <a class="project-link secondary-link" href="https://github.com/amsm2025/medivoice-ai" target="_blank" rel="noopener" aria-label="Open MediVoice AI GitHub repository in a new tab">GitHub Repository ↗</a>
-            </div>
-          </div>
+          <div class="aico-visual" role="img" aria-label="MediVoice AI voice-enabled patient record retrieval architecture"><div class="aico-visual-head"><span class="tag">VOICE AI / HEALTHCARE / FHIR</span><span class="aico-badge">LIVE</span></div><h3>MediVoice AI</h3><p class="aico-subtitle">Intelligent Patient Record Retrieval Agent</p><div class="aico-architecture"><div class="aico-layer aico-ai"><strong>Voice & Conversation Layer</strong><span>Speech Recognition • Intent Detection • Spoken Response</span></div><div class="aico-connector"></div><div class="aico-layer"><strong>Secure Retrieval Workflow</strong><span>Patient Matching • DOB Verification • RBAC Scaffolding</span></div><div class="aico-modules"><span>Patient</span><span>Allergies</span><span>Medications</span><span>Diagnoses</span><span>Labs</span><span>Appointments</span><span>FHIR</span><span>Audit</span></div><div class="aico-layer aico-data"><strong>Clinical Data Boundary</strong><span>Synthetic Records • FHIR-style Resources • Deterministic Source of Truth</span></div></div></div>
+          <div class="project-content"><div class="project-topline"><span class="tag">FASTAPI / VOICE AI / FHIR</span><span class="project-number">02</span></div><h3>MediVoice AI</h3><p class="project-summary">A voice-enabled healthcare AI prototype that lets authorized users retrieve synthetic patient information through natural-language requests while keeping identity verification, authorization concepts, clinical data retrieval and audit logging separate from the conversational layer.</p><div class="case-study-grid"><div class="case-study-item"><strong>Problem</strong><span>Clinical staff can spend valuable time navigating fragmented screens and records to locate routine patient information during care workflows.</span></div><div class="case-study-item"><strong>Solution</strong><span>Built a conversational patient-record retrieval flow supporting voice and text requests for summaries, allergies, medications, diagnoses, laboratory results and appointments.</span></div><div class="case-study-item"><strong>Engineering</strong><span>Implemented FastAPI REST endpoints, browser speech recognition and synthesis, patient matching, DOB verification, FHIR-oriented resources, RBAC scaffolding, audit events, automated tests and Docker deployment.</span></div><div class="case-study-item"><strong>Safety & Scope</strong><span>Uses synthetic patient data only and is not for clinical use. The conversational layer interprets requests while deterministic application services remain the source of clinical facts.</span></div></div><div class="project-tech"><span>Python</span><span>FastAPI</span><span>Voice AI</span><span>FHIR</span><span>REST API</span><span>RBAC</span><span>Audit Logging</span><span>Docker</span><span>Render</span></div><div class="project-actions"><a class="project-link" href="https://medivoice-ai-9ke2.onrender.com/" target="_blank" rel="noopener">Live Demo ↗</a><a class="project-link secondary-link" href="medivoice-ai.html">View Case Study ↗</a><a class="project-link secondary-link" href="https://github.com/amsm2025/medivoice-ai" target="_blank" rel="noopener">GitHub Repository ↗</a></div></div>
         </article>`;
-
-    if (firstProject) {
-        firstProject.insertAdjacentHTML('afterend', mediVoiceProject);
-    } else {
-        projectShowcase.insertAdjacentHTML('afterbegin', mediVoiceProject);
-    }
-
-    projectShowcase.querySelectorAll('.project-number').forEach((numberElement, index) => {
-        numberElement.textContent = String(index + 1).padStart(2, '0');
-    });
+    if (firstProject) firstProject.insertAdjacentHTML('afterend', mediVoiceProject); else projectShowcase.insertAdjacentHTML('afterbegin', mediVoiceProject);
+    projectShowcase.querySelectorAll('.project-number').forEach((el, i) => el.textContent = String(i + 1).padStart(2, '0'));
 }
 
-// Add the deployed Healthcare AI Voice Agent demo to its case study.
-const healthcareProject = Array.from(document.querySelectorAll('.project-case')).find(
-    (project) => project.querySelector('h3')?.textContent?.trim() === 'Healthcare AI Voice Agent'
-);
-
+const healthcareProject = Array.from(document.querySelectorAll('.project-case')).find(project => project.querySelector('h3')?.textContent?.trim() === 'Healthcare AI Voice Agent');
 if (healthcareProject) {
     const projectActions = healthcareProject.querySelector('.project-actions');
-    const existingLiveDemo = projectActions?.querySelector('[data-healthcare-live-demo]');
-
-    if (projectActions && !existingLiveDemo) {
-        const liveDemo = document.createElement('a');
-        liveDemo.className = 'project-link';
-        liveDemo.href = 'https://healthcare-ai-voice-agent-ui.onrender.com/';
-        liveDemo.target = '_blank';
-        liveDemo.rel = 'noopener';
-        liveDemo.setAttribute('aria-label', 'Open Healthcare AI Voice Agent live demo in a new tab');
-        liveDemo.setAttribute('data-healthcare-live-demo', 'true');
-        liveDemo.textContent = 'Live Demo ↗';
-        projectActions.insertBefore(liveDemo, projectActions.firstChild);
+    if (projectActions && !projectActions.querySelector('[data-healthcare-live-demo]')) {
+        const liveDemo = document.createElement('a'); liveDemo.className = 'project-link'; liveDemo.href = 'https://healthcare-ai-voice-agent-ui.onrender.com/'; liveDemo.target = '_blank'; liveDemo.rel = 'noopener'; liveDemo.setAttribute('data-healthcare-live-demo', 'true'); liveDemo.textContent = 'Live Demo ↗'; projectActions.insertBefore(liveDemo, projectActions.firstChild);
     }
 }
 
-// Add MediDx AI as a featured clinical decision-support case study.
 if (projectShowcase && !document.querySelector('[data-project="medidx-ai"]')) {
     const firstProject = projectShowcase.querySelector('.project-case');
     const mediDxProject = `
         <article class="project-case featured-case" data-project="medidx-ai">
-          <div class="aico-visual" role="img" aria-label="MediDx AI clinical decision-support architecture">
-            <div class="aico-visual-head">
-              <span class="tag">AI / HEALTHCARE / CLINICAL SUPPORT</span>
-              <span class="aico-badge">LIVE</span>
-            </div>
-            <h3>MediDx AI</h3>
-            <p class="aico-subtitle">AI-Assisted Health Assessment & Clinical Decision Support</p>
-            <div class="aico-architecture">
-              <div class="aico-layer aico-ai"><strong>Clinical Intake</strong><span>Symptoms • History • Vitals • Risk Factors</span></div>
-              <div class="aico-connector"></div>
-              <div class="aico-layer"><strong>Deterministic Safety Engine</strong><span>Red Flags • Urgency • Guardrails</span></div>
-              <div class="aico-modules">
-                <span>Patient</span><span>Encounter</span><span>Vitals</span><span>Red Flags</span>
-                <span>Differentials</span><span>Evidence</span><span>History</span><span>Audit</span>
-              </div>
-              <div class="aico-layer aico-data"><strong>Clinical Decision-Support Layer</strong><span>FastAPI • PostgreSQL-ready Persistence • Clinician Review</span></div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-topline"><span class="tag">FASTAPI / PYTHON / HEALTHCARE</span><span class="project-number">02</span></div>
-            <h3>MediDx AI</h3>
-            <p class="project-summary">A safety-conscious clinical decision-support demo that turns structured synthetic patient intake into deterministic red-flag screening, urgency classification, evidence-based differential considerations, missing-information prompts and clinician next-step guidance.</p>
-
-            <div class="case-study-grid">
-              <div class="case-study-item">
-                <strong>Problem</strong>
-                <span>Clinical intake contains many signals that must be organized quickly without allowing an AI prototype to overstate certainty or replace professional judgment.</span>
-              </div>
-              <div class="case-study-item">
-                <strong>Solution</strong>
-                <span>Built a structured assessment workflow that places deterministic emergency screening ahead of any future generative-AI layer and clearly separates suggestions from confirmed diagnosis.</span>
-              </div>
-              <div class="case-study-item">
-                <strong>Engineering</strong>
-                <span>Implemented FastAPI endpoints, synthetic patient encounters, red-flag rules, differential evidence cards, assessment history, audit summaries, Docker development and Render deployment.</span>
-              </div>
-              <div class="case-study-item">
-                <strong>Safety & Scope</strong>
-                <span>Portfolio demonstration using synthetic scenarios only. It does not diagnose disease, prescribe treatment or replace licensed clinical care.</span>
-              </div>
-            </div>
-
-            <div class="project-tech"><span>Python</span><span>FastAPI</span><span>SQLAlchemy</span><span>PostgreSQL</span><span>Clinical Decision Support</span><span>Docker</span><span>Render</span></div>
-            <div class="project-actions">
-              <a class="project-link" href="https://medidx-ai-q1sg.onrender.com/" target="_blank" rel="noopener" aria-label="Open MediDx AI live demo in a new tab">Live Demo ↗</a>
-              <a class="project-link secondary-link" href="medidx-ai.html" aria-label="Open MediDx AI case study">View Case Study ↗</a>
-              <a class="project-link secondary-link" href="https://github.com/amsm2025/medidx-ai" target="_blank" rel="noopener" aria-label="Open MediDx AI GitHub repository in a new tab">GitHub Repository ↗</a>
-            </div>
-          </div>
+          <div class="aico-visual" role="img" aria-label="MediDx AI clinical decision-support architecture"><div class="aico-visual-head"><span class="tag">AI / HEALTHCARE / CLINICAL SUPPORT</span><span class="aico-badge">LIVE</span></div><h3>MediDx AI</h3><p class="aico-subtitle">AI-Assisted Health Assessment & Clinical Decision Support</p><div class="aico-architecture"><div class="aico-layer aico-ai"><strong>Clinical Intake</strong><span>Symptoms • History • Vitals • Risk Factors</span></div><div class="aico-connector"></div><div class="aico-layer"><strong>Deterministic Safety Engine</strong><span>Red Flags • Urgency • Guardrails</span></div><div class="aico-modules"><span>Patient</span><span>Encounter</span><span>Vitals</span><span>Red Flags</span><span>Differentials</span><span>Evidence</span><span>History</span><span>Audit</span></div><div class="aico-layer aico-data"><strong>Clinical Decision-Support Layer</strong><span>FastAPI • PostgreSQL-ready Persistence • Clinician Review</span></div></div></div>
+          <div class="project-content"><div class="project-topline"><span class="tag">FASTAPI / PYTHON / HEALTHCARE</span><span class="project-number">02</span></div><h3>MediDx AI</h3><p class="project-summary">A safety-conscious clinical decision-support demo that turns structured synthetic patient intake into deterministic red-flag screening, urgency classification, evidence-based differential considerations, missing-information prompts and clinician next-step guidance.</p><div class="case-study-grid"><div class="case-study-item"><strong>Problem</strong><span>Clinical intake contains many signals that must be organized quickly without allowing an AI prototype to overstate certainty or replace professional judgment.</span></div><div class="case-study-item"><strong>Solution</strong><span>Built a structured assessment workflow that places deterministic emergency screening ahead of any future generative-AI layer and clearly separates suggestions from confirmed diagnosis.</span></div><div class="case-study-item"><strong>Engineering</strong><span>Implemented FastAPI endpoints, synthetic patient encounters, red-flag rules, differential evidence cards, assessment history, audit summaries, Docker development and Render deployment.</span></div><div class="case-study-item"><strong>Safety & Scope</strong><span>Portfolio demonstration using synthetic scenarios only. It does not diagnose disease, prescribe treatment or replace licensed clinical care.</span></div></div><div class="project-tech"><span>Python</span><span>FastAPI</span><span>SQLAlchemy</span><span>PostgreSQL</span><span>Clinical Decision Support</span><span>Docker</span><span>Render</span></div><div class="project-actions"><a class="project-link" href="https://medidx-ai-q1sg.onrender.com/" target="_blank" rel="noopener">Live Demo ↗</a><a class="project-link secondary-link" href="medidx-ai.html">View Case Study ↗</a><a class="project-link secondary-link" href="https://github.com/amsm2025/medidx-ai" target="_blank" rel="noopener">GitHub Repository ↗</a></div></div>
         </article>`;
+    if (firstProject) firstProject.insertAdjacentHTML('afterend', mediDxProject); else projectShowcase.insertAdjacentHTML('afterbegin', mediDxProject);
+    projectShowcase.querySelectorAll('.project-number').forEach((el, i) => el.textContent = String(i + 1).padStart(2, '0'));
+}
 
-    if (firstProject) {
-        firstProject.insertAdjacentHTML('afterend', mediDxProject);
-    } else {
-        projectShowcase.insertAdjacentHTML('afterbegin', mediDxProject);
-    }
-
-    projectShowcase.querySelectorAll('.project-number').forEach((numberElement, index) => {
-        numberElement.textContent = String(index + 1).padStart(2, '0');
-    });
+// Add HMO Doctor Finder as a live healthcare search case study.
+if (projectShowcase && !document.querySelector('[data-project="doctorfinder"]')) {
+    const firstProject = projectShowcase.querySelector('.project-case');
+    const doctorFinderProject = `
+      <article class="project-case featured-case" data-project="doctorfinder">
+        <div class="aico-visual" role="img" aria-label="HMO Doctor Finder search and API architecture">
+          <div class="aico-visual-head"><span class="tag">HEALTHTECH / SEARCH / API</span><span class="aico-badge">LIVE</span></div>
+          <h3>HMO Doctor Finder</h3><p class="aico-subtitle">Healthcare Provider Discovery Platform</p>
+          <div class="aico-architecture"><div class="aico-layer aico-ai"><strong>Doctor Discovery Experience</strong><span>HMO • Specialty • Location • Hospital Search</span></div><div class="aico-connector"></div><div class="aico-layer"><strong>FastAPI Service Layer</strong><span>REST API • Filtering • Provider Matching</span></div><div class="aico-modules"><span>Doctors</span><span>HMOs</span><span>Specialties</span><span>Hospitals</span><span>Locations</span><span>Search</span><span>API Docs</span><span>Render</span></div><div class="aico-layer aico-data"><strong>Deployment & Data Boundary</strong><span>Python • Static Frontend • GitHub • Render</span></div></div>
+        </div>
+        <div class="project-content">
+          <div class="project-topline"><span class="tag">FASTAPI / PYTHON / HEALTHTECH</span><span class="project-number">02</span></div>
+          <h3>HMO Doctor Finder</h3>
+          <p class="project-summary">A deployed healthcare provider discovery application that helps users find doctors by HMO coverage, specialty, hospital and location through a responsive web interface backed by a FastAPI REST service.</p>
+          <div class="case-study-grid"><div class="case-study-item"><strong>Problem</strong><span>Patients often need to cross-check HMO coverage, physician specialty and facility location across fragmented provider information.</span></div><div class="case-study-item"><strong>Solution</strong><span>Created a focused search experience that brings provider discovery criteria into one interface and returns matching doctor information quickly.</span></div><div class="case-study-item"><strong>Engineering</strong><span>Built a Python FastAPI backend, REST endpoints, responsive static frontend, API documentation and separate frontend/backend Render deployments.</span></div><div class="case-study-item"><strong>Deployment</strong><span>Published from GitHub with automatic deployment, a public live frontend and independently accessible Swagger API documentation.</span></div></div>
+          <div class="project-tech"><span>Python</span><span>FastAPI</span><span>REST API</span><span>HTML/CSS</span><span>JavaScript</span><span>GitHub</span><span>Render</span></div>
+          <div class="project-actions"><a class="project-link" href="https://hmo-doctor-finder.onrender.com" target="_blank" rel="noopener">Live Demo ↗</a><a class="project-link secondary-link" href="doctorfinder.html">View Case Study ↗</a><a class="project-link secondary-link" href="https://github.com/amsm2025/doctorfinder" target="_blank" rel="noopener">GitHub Repository ↗</a><a class="project-link secondary-link" href="https://hmo-doctor-finder-api.onrender.com/docs" target="_blank" rel="noopener">API Docs ↗</a></div>
+        </div>
+      </article>`;
+    if (firstProject) firstProject.insertAdjacentHTML('afterend', doctorFinderProject); else projectShowcase.insertAdjacentHTML('afterbegin', doctorFinderProject);
+    projectShowcase.querySelectorAll('.project-number').forEach((el, i) => el.textContent = String(i + 1).padStart(2, '0'));
 }
