@@ -77,3 +77,26 @@ if (projectShowcase && !document.querySelector('[data-project="doctorfinder"]'))
     if (firstProject) firstProject.insertAdjacentHTML('afterend', doctorFinderProject); else projectShowcase.insertAdjacentHTML('afterbegin', doctorFinderProject);
     projectShowcase.querySelectorAll('.project-number').forEach((el, i) => el.textContent = String(i + 1).padStart(2, '0'));
 }
+
+// Add Agentic DataOps Platform as a live agentic data engineering case study.
+if (projectShowcase && !document.querySelector('[data-project="agentic-data-platform"]')) {
+    const firstProject = projectShowcase.querySelector('.project-case');
+    const agenticDataProject = `
+      <article class="project-case featured-case" data-project="agentic-data-platform">
+        <div class="aico-visual" role="img" aria-label="Agentic DataOps Platform streaming and AI architecture">
+          <div class="aico-visual-head"><span class="tag">AGENTIC AI / DATA ENGINEERING</span><span class="aico-badge">LIVE</span></div>
+          <h3>Agentic DataOps</h3><p class="aico-subtitle">Streaming Data Platform & Governed AI Operations</p>
+          <div class="aico-architecture"><div class="aico-layer aico-ai"><strong>LangGraph DataOps Agent</strong><span>OpenAI Tool Calling • Governed Diagnostics • Read-only SQL</span></div><div class="aico-connector"></div><div class="aico-layer"><strong>Streaming & Analytics Pipeline</strong><span>Kafka • Spark Structured Streaming • Snowflake • dbt</span></div><div class="aico-modules"><span>Producer</span><span>Kafka</span><span>Spark</span><span>DQ</span><span>DLQ</span><span>Snowflake</span><span>dbt</span><span>Agent</span></div><div class="aico-layer aico-data"><strong>Safety & Infrastructure</strong><span>11/11 pytest • 5/5 dbt tests • Terraform • Docker • Human Approval</span></div></div>
+        </div>
+        <div class="project-content">
+          <div class="project-topline"><span class="tag">KAFKA / SPARK / SNOWFLAKE / LANGGRAPH</span><span class="project-number">02</span></div>
+          <h3>Agentic DataOps Platform</h3>
+          <p class="project-summary">A portfolio-grade agentic data engineering platform that streams enterprise order events through Kafka and Spark, routes invalid data to a DLQ, persists trusted records in Snowflake, transforms analytics with dbt, and uses a governed LangGraph agent for pipeline diagnostics and reconciliation.</p>
+          <div class="case-study-grid"><div class="case-study-item"><strong>Problem</strong><span>Modern data platforms need near-real-time ingestion, strong data-quality controls and faster operational diagnosis without giving AI unrestricted infrastructure authority.</span></div><div class="case-study-item"><strong>Solution</strong><span>Built an end-to-end streaming architecture with separate valid and quarantine paths, warehouse transformation, automated tests and a governed AI operations layer.</span></div><div class="case-study-item"><strong>Engineering</strong><span>Implemented Python producers, Kafka topics, Spark Structured Streaming validation and deduplication, Snowflake ingestion, dbt models/tests, LangGraph tool orchestration and live Snowflake integration testing.</span></div><div class="case-study-item"><strong>Safety</strong><span>Agent database access is read-only by default, destructive SQL is blocked deterministically, and write/remediation actions remain behind a human approval boundary.</span></div></div>
+          <div class="project-tech"><span>Python</span><span>Kafka</span><span>Spark</span><span>Snowflake</span><span>dbt</span><span>LangGraph</span><span>OpenAI</span><span>Terraform</span><span>Docker</span><span>Render</span></div>
+          <div class="project-actions"><a class="project-link" href="https://agentic-data-platform.onrender.com" target="_blank" rel="noopener">Live Demo ↗</a><a class="project-link secondary-link" href="https://github.com/amsm2025/agentic-data-platform" target="_blank" rel="noopener">GitHub Repository ↗</a></div>
+        </div>
+      </article>`;
+    if (firstProject) firstProject.insertAdjacentHTML('afterend', agenticDataProject); else projectShowcase.insertAdjacentHTML('afterbegin', agenticDataProject);
+    projectShowcase.querySelectorAll('.project-number').forEach((el, i) => el.textContent = String(i + 1).padStart(2, '0'));
+}
