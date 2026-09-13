@@ -1,0 +1,44 @@
+name: Link ProLink layout stylesheet
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/link-prolink-layout.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Insert dedicated stylesheet link
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          text = p.read_text(encoding='utf-8')
+          link = '  <link rel="stylesheet" href="prolink-layout.css?v=20260914-0200" />\n'
+          if 'prolink-layout.css' not in text:
+              anchor = '  <link rel="stylesheet" href="style.css?v=20260910-roadmap" />\n'
+              if anchor not in text:
+                  raise SystemExit('Base stylesheet link not found')
+              text = text.replace(anchor, anchor + link, 1)
+              p.write_text(text, encoding='utf-8')
+          PY
+      - name: Commit update
+        run: |
+          if git diff --quiet; then
+            echo "No changes needed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Load dedicated ProLink AI card layout stylesheet"
+          git push
