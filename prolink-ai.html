@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ProLink AI case study by Angel Martin Manalansan — an AI-powered professional networking and talent platform using Next.js, FastAPI, JWT authentication, role-aware AI assistance and Render deployment." />
+  <title>ProLink AI Case Study | Angel Martin Manalansan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260914-prolink" />
+  <style>
+    .case-page { max-width: 1180px; margin: 0 auto; padding: 120px 28px 80px; }
+    .case-hero { display:grid; grid-template-columns:1.05fr .95fr; gap:28px; align-items:center; margin-bottom:54px; }
+    .case-hero h1 { font-size:clamp(2.8rem,6vw,5.5rem); line-height:.96; margin:.4rem 0 1rem; }
+    .case-lead { font-size:1.08rem; line-height:1.8; max-width:760px; }
+    .case-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+    .case-section { margin:54px 0; }
+    .case-section h2 { margin-bottom:20px; }
+    .case-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .case-card { border:1px solid rgba(150,170,200,.18); border-radius:18px; padding:22px; background:rgba(255,255,255,.035); }
+    .case-card h3 { margin-top:0; }
+    .flow { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+    .flow span { border:1px solid rgba(115,182,255,.25); background:rgba(115,182,255,.08); padding:10px 12px; border-radius:999px; font-size:.88rem; }
+    .disclosure { margin-top:20px; padding:18px 20px; border-left:4px solid #73b6ff; background:rgba(115,182,255,.08); border-radius:12px; }
+    @media(max-width:800px){ .case-hero,.case-grid{grid-template-columns:1fr}.case-page{padding-top:96px} }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html#home">AMM<span>.</span></a>
+    <nav aria-label="Case study navigation">
+      <a href="index.html#projects">Projects</a>
+      <a href="https://prolink-ai.onrender.com" target="_blank" rel="noopener">Live Demo</a>
+      <a href="https://github.com/amsm2025/prolink-ai" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="case-page">
+    <section class="case-hero">
+      <div>
+        <p class="section-kicker">CASE STUDY · AI / FULL STACK / TALENT TECH</p>
+        <h1>ProLink AI</h1>
+        <p class="case-lead">An AI-powered professional networking and talent platform that combines professional profiles, connections, jobs, applications and recruiter workflows with an authenticated, role-aware AI assistant grounded in application data.</p>
+        <div class="case-actions">
+          <a class="btn primary" href="https://prolink-ai.onrender.com" target="_blank" rel="noopener">Launch Live Demo ↗</a>
+          <a class="btn ghost" href="https://github.com/amsm2025/prolink-ai" target="_blank" rel="noopener">View GitHub Repository ↗</a>
+          <a class="btn ghost" href="index.html#projects">Back to Projects</a>
+        </div>
+      </div>
+
+      <div class="aico-visual" role="img" aria-label="ProLink AI architecture overview">
+        <div class="aico-visual-head"><span class="tag">NEXT.JS / FASTAPI / AI</span><span class="aico-badge">0.4</span></div>
+        <h3>ProLink AI</h3>
+        <p class="aico-subtitle">AI-native professional networking & talent platform</p>
+        <div class="aico-architecture">
+          <div class="aico-layer aico-ai"><strong>Role-Aware AI Assistant</strong><span>Career Copilot • Recruiter Assistant • Context-Aware Responses</span></div>
+          <div class="aico-connector"></div>
+          <div class="aico-layer"><strong>Application & API Layer</strong><span>Next.js • FastAPI • JWT • REST</span></div>
+          <div class="aico-modules"><span>Profiles</span><span>Network</span><span>Jobs</span><span>Applications</span><span>Recruiter</span><span>Chat</span><span>Auth</span><span>Analytics</span></div>
+          <div class="aico-layer aico-data"><strong>Data & Deployment</strong><span>SQLAlchemy • SQLite / PostgreSQL-ready • Render</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <p class="section-kicker">THE CHALLENGE</p>
+      <h2>Turning a professional-networking prototype into an AI-native product experience.</h2>
+      <div class="case-grid">
+        <article class="case-card"><h3>Problem</h3><p>Traditional professional-networking demos often stop at profiles, feeds and job listings. They do not demonstrate how AI can use authenticated product context to provide career guidance or recruiter decision support.</p></article>
+        <article class="case-card"><h3>Design Goal</h3><p>Build an original professional-networking and talent platform with clear application boundaries, secure authentication, role-specific workflows and an AI assistant that can reason over relevant user and recruiting data without exposing provider credentials to the browser.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <p class="section-kicker">THE SOLUTION</p>
+      <h2>Professional networking plus contextual AI assistance.</h2>
+      <div class="flow" aria-label="ProLink AI request flow">
+        <span>Authenticated User</span><span>→</span><span>Next.js UI</span><span>→</span><span>FastAPI</span><span>→</span><span>Profile / Job / Application Context</span><span>→</span><span>AI Assistant</span><span>→</span><span>Grounded Response</span>
+      </div>
+      <div class="case-grid" style="margin-top:20px">
+        <article class="case-card"><h3>Professional Experience</h3><p>Users can sign in, view professional profiles, discover people, send connection requests, browse jobs, apply and track their own applications.</p></article>
+        <article class="case-card"><h3>Recruiter Experience</h3><p>Recruiter accounts can inspect the application pipeline and use a role-aware assistant for candidate summaries, match reasoning, skill-gap analysis and outreach drafting.</p></article>
+        <article class="case-card"><h3>Context-Aware AI</h3><p>The assistant receives server-built context from the authenticated user's profile, available jobs, applications, network state and recruiter pipeline rather than operating as a generic chatbot wrapper.</p></article>
+        <article class="case-card"><h3>Resilient Demo Mode</h3><p>A deterministic fallback keeps the public demonstration usable even when no external model key is configured or an AI provider is temporarily unavailable.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <p class="section-kicker">ENGINEERING</p>
+      <h2>Technology and implementation.</h2>
+      <div class="project-tech"><span>Next.js</span><span>React</span><span>TypeScript</span><span>FastAPI</span><span>Python</span><span>SQLAlchemy</span><span>JWT</span><span>REST API</span><span>OpenAI-compatible API</span><span>GitHub Actions</span><span>Render</span></div>
+      <div class="case-grid" style="margin-top:20px">
+        <article class="case-card"><h3>Frontend</h3><p>Next.js and TypeScript provide the professional-network UI, job workflows, recruiter dashboard, session-aware navigation and floating AI assistant experience.</p></article>
+        <article class="case-card"><h3>Backend</h3><p>FastAPI handles authentication, profiles, people discovery, connections, jobs, applications, recruiter authorization, chat context construction and conversation history.</p></article>
+        <article class="case-card"><h3>Security</h3><p>Protected endpoints use JWT authentication, recruiter context is role-gated, CORS is environment-controlled and the AI provider key remains server-side.</p></article>
+        <article class="case-card"><h3>Deployment</h3><p>The frontend and FastAPI backend are independently deployed on Render in Singapore with GitHub-connected deployments and environment-specific service configuration.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <p class="section-kicker">LIVE DEMO</p>
+      <h2>ProLink AI v0.4 is deployed.</h2>
+      <p class="case-lead">The public demo showcases professional and recruiter workflows plus the ProLink AI Assistant. The current portfolio deployment uses demo-oriented persistence and is PostgreSQL-ready for a more durable production configuration.</p>
+      <div class="case-actions">
+        <a class="btn primary" href="https://prolink-ai.onrender.com" target="_blank" rel="noopener">Open ProLink AI ↗</a>
+        <a class="btn ghost" href="https://prolink-ai-api.onrender.com/docs" target="_blank" rel="noopener">API Docs ↗</a>
+      </div>
+      <div class="disclosure"><strong>Portfolio / demonstration scope:</strong> ProLink AI is an original portfolio prototype for professional networking and talent workflows. Demo accounts, seeded data and fallback AI behavior are intended for demonstration, not production use.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><a class="brand footer-logo" href="index.html#home">AMM<span>.</span></a><p>Full Stack Engineering · AI · Enterprise Systems</p></div>
+    <div class="footer-meta"><span>© 2026 Angel Martin Manalansan</span><span>ProLink AI Case Study</span></div>
+  </footer>
+</body>
+</html>
