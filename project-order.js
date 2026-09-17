@@ -11,7 +11,9 @@
 
   if (!hasIncidentOps) {
     const card = document.createElement('article');
-    card.className = 'project-case incidentops-case';
+    // Reuse the same full-width, two-column horizontal layout as the other
+    // featured project/case-study cards.
+    card.className = 'project-case aico-case incidentops-case';
     card.dataset.project = 'agentic-incidentops';
     card.innerHTML = `
       <div class="aico-visual" role="img" aria-label="Agentic IncidentOps governed incident response architecture">
